@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="h-[74px]">
-      <div className="navbar bg-white dark:bg-black shadow-sm w-full px-4 md:px-8 border-b-2 z-50 fixed backdrop-blur-md">
+      <div className="navbar bg-white shadow-sm w-full px-4 md:px-8 border-b-2 z-50 fixed backdrop-blur-md">
         <div className="w-11/12 container mx-auto">
           <div className="flex-1 flex-wrap">
             <Link to="/" className="flex gap-2 items-center">
@@ -22,13 +22,6 @@ const Navbar = () => {
           </div>
           <div className="flex items-center justify-center">
             <ul className="flex items-center justify-center gap-4 px-1 mr-2">
-              {/* <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/allItems">All Items</Link>
-              </li> */}
-
               <li className="flex">
                 <NavLink
                   className={({ isActive }) =>
@@ -38,7 +31,8 @@ const Navbar = () => {
                   }
                   to={"/"}
                 >
-                  <FaHome /> Home
+                  <FaHome /> 
+                  <span>Home</span>
                 </NavLink>
               </li>
 
@@ -49,22 +43,18 @@ const Navbar = () => {
                       ? "text-base font-medium text-cyan-400 flex items-center gap-1"
                       : "text-base font-medium text-gray-800 hover:text-cyan-400 dark:text-white dark:hover:text-cyan-400 flex items-center gap-1"
                   }
-                  to={"/allItems"}
+                  to={"/profile"}
                 >
-                  <IoAlbumsSharp /> All Items
+                  <IoAlbumsSharp /> Profile
                 </NavLink>
               </li>
 
               {!user && (
-                // <li>
-                //   <Link to="/auth/login">Login</Link>
-                // </li>
                 <div className="flex justify-center items-center gap-2">
-                  {/* <div className="flex items-center gap-4"> */}
                   <div className="sm:flex sm:gap-2">
                     <NavLink
                       className="rounded-md bg-teal-500 px-5 py-2 text-base font-medium text-white shadow hover:bg-teal-700"
-                      to={"/auth/login"}
+                      to={"/authentication/login"}
                     >
                       Login
                     </NavLink>
@@ -72,7 +62,7 @@ const Navbar = () => {
                     <div className="hidden sm:flex">
                       <NavLink
                         className="rounded-md bg-gray-100 px-5 py-2 text-base font-medium text-teal-600 hover:bg-teal-500 hover:text-white"
-                        to={"/auth/register"}
+                        to={"/authentication/register"}
                       >
                         Register
                       </NavLink>
@@ -82,9 +72,7 @@ const Navbar = () => {
               )}
             </ul>
 
-            <ThemeToggle></ThemeToggle>
-
-            {user && (
+            {/* {user && (
               <div className="dropdown dropdown-end z-50">
                 <div
                   tabIndex={0}
@@ -124,7 +112,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>
