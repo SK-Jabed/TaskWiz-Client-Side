@@ -141,7 +141,6 @@ const Footer = () => {
                 <p className="text-lg font-medium text-gray-900 dark:text-white">
                   About Us
                 </p>
-
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
                     <a
