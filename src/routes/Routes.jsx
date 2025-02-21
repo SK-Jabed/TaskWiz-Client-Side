@@ -6,6 +6,9 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Authentication/Login";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import PrivateRoute from "./PrivateRoute";
+import DashboardLayout from "../layouts/DashboardLayout";
+import AllTasks from "../pages/Dashboard/AllTasks";
+import Statistics from "../pages/Dashboard/Statistics";
 
 
 export const router = createBrowserRouter([
@@ -43,47 +46,47 @@ export const router = createBrowserRouter([
     //   },
     ],
   },
-//   {
-//     path: "/dashboard",
-//     element: (
-//       <PrivateRoute>
-//         <DashboardLayout />
-//       </PrivateRoute>
-//     ),
-//     children: [
-//       {
-//         index: true,
-//         element: (
-//           <PrivateRoute>
-//             <Statistics />
-//           </PrivateRoute>
-//         ),
-//       },
-//       {
-//         path: "addPublisher",
-//         element: (
-//           <PrivateRoute>
-//             <AddPublisher />
-//           </PrivateRoute>
-//         ),
-//       },
-//       {
-//         path: "manageUsers",
-//         element: (
-//           <PrivateRoute>
-//             <ManageUsers />
-//           </PrivateRoute>
-//         ),
-//       },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        index: true,
+        element: (
+          <PrivateRoute>
+            <Statistics />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "allTasks",
+        element: (
+          <PrivateRoute>
+            <AllTasks />
+          </PrivateRoute>
+        ),
+      },
+    //   {
+    //     path: "manageUsers",
+    //     element: (
+    //       <PrivateRoute>
+    //         <ManageUsers />
+    //       </PrivateRoute>
+    //     ),
+    //   },
 
-//       {
-//         path: "allArticles",
-//         element: (
-//           <PrivateRoute>
-//             <AdminArticles />
-//           </PrivateRoute>
-//         ),
-//       },
-//     ],
-//   },
+    //   {
+    //     path: "allArticles",
+    //     element: (
+    //       <PrivateRoute>
+    //         <AdminArticles />
+    //       </PrivateRoute>
+    //     ),
+    //   },
+    ],
+  },
 ]);

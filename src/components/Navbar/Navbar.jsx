@@ -162,6 +162,18 @@ const Navbar = () => {
                 <IoAlbumsSharp /> Profile
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-cyan-500 font-medium flex items-center gap-1"
+                    : "text-gray-800 hover:text-cyan-500 font-medium flex items-center gap-1"
+                }
+              >
+                <IoAlbumsSharp /> Dashboard
+              </NavLink>
+            </li>
           </ul>
 
           {/* Authentication Buttons */}
