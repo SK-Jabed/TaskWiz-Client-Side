@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../layouts/DashboardLayout";
 import AllTasks from "../pages/Dashboard/AllTasks";
 import Statistics from "../pages/Dashboard/Statistics";
+import TaskBoard from "../pages/Dashboard/TaskBoard";
 
 
 export const router = createBrowserRouter([
@@ -63,10 +64,10 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "allTasks",
+        path: "taskBoard",
         element: (
           <PrivateRoute>
-            <AllTasks />
+            <TaskBoard />
           </PrivateRoute>
         ),
       },

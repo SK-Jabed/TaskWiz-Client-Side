@@ -7,8 +7,8 @@ const Menu = () => {
     <>
       <MenuItem
         icon={BsFillHouseAddFill}
-        label="All Tasks"
-        address="allTasks"
+        label="Task Board"
+        address="taskBoard"
       />
       {/* <MenuItem
         icon={MdOutlineManageHistory}
