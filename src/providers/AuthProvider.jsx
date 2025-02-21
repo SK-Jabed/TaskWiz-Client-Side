@@ -46,37 +46,7 @@ const AuthProvider = ({ children }) => {
   };
 
   // onAuthStateChange
-    // useEffect(() => {
-    //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-    //     setUser(currentUser);
-    //     console.log("CurrentUser-->", currentUser?.email);
-
-    //     if (currentUser) {
-    //       // Get JWT token and Store on Local Storage
-    //       const userInfo = {email : currentUser?.email};
-
-    //       axiosPublic.post("/jwt", userInfo)
-    //       .then(res => {
-    //         if (res.data.token) {
-    //             localStorage.setItem("access-token", res.data.token);
-    //         }
-    //       })
-    //     } else {
-    //         // Remove the Token
-    //         localStorage.removeItem("access-token");
-    //     //   setUser(currentUser);
-    //     //   axios.get(`${import.meta.env.VITE_API_URL}/logout`, {
-    //     //     withCredentials: true,
-    //     //   });
-    //     }
-    //     setLoading(false);
-    //   });
-    //   return () => {
-    //     return unsubscribe();
-    //   };
-    // }, []);
-
-    useEffect(() => {
+  useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser ? currentUser : null);
       console.log("CurrentUser-->", currentUser?.email);

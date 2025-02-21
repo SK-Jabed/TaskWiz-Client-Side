@@ -31,7 +31,7 @@
 //                   }
 //                   to={"/"}
 //                 >
-//                   <FaHome /> 
+//                   <FaHome />
 //                   <span>Home</span>
 //                 </NavLink>
 //               </li>
@@ -110,8 +110,6 @@
 
 // export default Navbar;
 
-
-
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -125,7 +123,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md border-b z-50">
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[74px]">
-        
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="TaskWiz Logo" className="h-10 w-auto" />
@@ -150,7 +147,7 @@ const Navbar = () => {
               </NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <NavLink
                 to="/profile"
                 className={({ isActive }) =>
@@ -161,7 +158,8 @@ const Navbar = () => {
               >
                 <IoAlbumsSharp /> Profile
               </NavLink>
-            </li>
+            </li> */}
+
             <li>
               <NavLink
                 to="/dashboard"
@@ -187,15 +185,15 @@ const Navbar = () => {
           ) : (
             <div className="flex items-center gap-4">
               {/* Profile Avatar */}
-              <Link to={"/profile"}>
-              <button className="flex items-center gap-2">
-                <img
-                  src={user?.photoURL}
-                  alt="User Profile"
-                  title={user?.displayName}
-                  className="w-12 h-12 rounded-full border"
-                />
-              </button>
+              <Link to={"/dashboard/taskBoard"}>
+                <button className="flex items-center gap-2">
+                  <img
+                    src={user?.photoURL}
+                    alt="User Profile"
+                    title={user?.displayName}
+                    className="w-12 h-12 rounded-full border"
+                  />
+                </button>
               </Link>
               {/* <button
                     onClick={logOut}
@@ -204,9 +202,7 @@ const Navbar = () => {
                     Logout
                   </button> */}
             </div>
-            
           )}
-          
         </div>
       </div>
     </nav>

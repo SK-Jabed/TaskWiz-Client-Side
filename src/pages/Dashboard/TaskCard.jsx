@@ -1,36 +1,45 @@
-import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
-import { useState, useEffect } from "react";
-import { MdEdit } from "react-icons/md";
-import { FaRegEye } from "react-icons/fa6";
+import React, { useState } from "react";
+import { HiPencil } from "react-icons/hi";
 import { FaTrash } from "react-icons/fa";
-import { FaPlusCircle } from "react-icons/fa";
-import axios from "axios";
-import TaskModal from "../../components/Modals/TaskModal";
+import Swal from "sweetalert2";
+import { useTasks } from "../../hooks/useTasks";
+import EditTaskModal from "../../components/Modals/EditTaskModal";
 
 const TaskCard = ({ task }) => {
-  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: task._id });
+  const { deleteTask } = useTasks();
+  const [isEditOpen, setIsEditOpen] = useState(false);
 
-  const style = {
-    transform: CSS.Transform.toString(transform),
-    transition,
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteTask.mutate(task._id);
+      }
+    });
   };
 
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners} className="bg-white p-3 rounded-lg shadow-md mb-2">
-      <h3 className="font-bold">{task.title}</h3>
-      <p className="text-gray-600 text-sm">{task.description}</p>
-      <div className="flex gap-2 mt-2">
-        <button className="text-blue-500">
-          <FaRegEye />
-        </button>
-        <button className="text-yellow-500">
-          <MdEdit />
-        </button>
-        <button onClick={() => deleteTask(task._id)} className="text-red-500">
-          <FaTrash />
-        </button>
+    <div className="p-4 bg-white rounded-lg shadow-md">
+      <h3 className="font-semibold">{task.title}</h3>
+      <p className="text-sm text-gray-600">{task.description}</p>
+      <div className="flex justify-between mt-3">
+        <HiPencil
+          className="h-5 w-5 text-blue-600 cursor-pointer"
+          onClick={() => setIsEditOpen(true)}
+        />
+        <FaTrash
+          className="h-5 w-5 text-red-600 cursor-pointer"
+          onClick={handleDelete}
+        />
       </div>
+
+      <EditTaskModal isOpen={isEditOpen} setIsOpen={setIsEditOpen} task={task} />
     </div>
   );
 };
