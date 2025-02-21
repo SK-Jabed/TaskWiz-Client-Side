@@ -3,6 +3,9 @@ import MainLayout from "../layouts/MainLayout";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import AuthLayout from "../layouts/AuthLayout";
+import Login from "../pages/Authentication/Login";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -34,10 +37,10 @@ export const router = createBrowserRouter([
         path: "login",
         element: <Login />,
       },
-      {
-        path: "register",
-        element: <Register />,
-      },
+    //   {
+    //     path: "register",
+    //     element: <Register />,
+    //   },
     ],
   },
 //   {
