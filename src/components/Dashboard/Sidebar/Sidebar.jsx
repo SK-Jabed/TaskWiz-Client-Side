@@ -24,9 +24,7 @@ const Sidebar = () => {
         <div>
           <div className="block cursor-pointer p-4 font-bold">
             <Link to="/">
-              <h1 className="text-2xl font-bold text-indigo-600">
-                TaskWiz
-              </h1>
+              <h1 className="text-2xl font-bold text-indigo-600">TaskWiz</h1>
             </Link>
           </div>
         </div>
@@ -49,9 +47,7 @@ const Sidebar = () => {
           <div>
             <div className="w-full hidden md:flex px-4 py-2 shadow-lg rounded-lg justify-center items-center bg-blue-100 mx-auto">
               <Link to="/">
-                <h1 className="text-2xl font-bold text-indigo-600">
-                  TaskWiz
-                </h1>
+                <h1 className="text-2xl font-bold text-indigo-600">TaskWiz</h1>
               </Link>
             </div>
           </div>
@@ -76,11 +72,7 @@ const Sidebar = () => {
         <div>
           <hr />
 
-          <MenuItem
-            icon={FcSettings}
-            label="Profile"
-            address="/profile"
-          />
+          <MenuItem icon={FcSettings} label="Profile" address="/profile" />
           <button
             onClick={logOut}
             className="flex w-full items-center px-4 py-2 mt-5 text-gray-600 hover:bg-gray-300 hover:text-gray-700 transition-colors duration-300 transform"

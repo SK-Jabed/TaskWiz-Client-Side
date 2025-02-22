@@ -138,9 +138,7 @@ const Footer = () => {
 
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
               <div className="text-center sm:text-left">
-                <p className="text-lg font-medium text-gray-900">
-                  About Us
-                </p>
+                <p className="text-lg font-medium text-gray-900">About Us</p>
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
                     <a
@@ -267,9 +265,7 @@ const Footer = () => {
               </div>
 
               <div className="text-center sm:text-left">
-                <p className="text-lg font-medium text-gray-900">
-                  Contact Us
-                </p>
+                <p className="text-lg font-medium text-gray-900">Contact Us</p>
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
@@ -319,9 +315,7 @@ const Footer = () => {
                         />
                       </svg>
 
-                      <span className="flex-1 text-gray-700">
-                        01863646515
-                      </span>
+                      <span className="flex-1 text-gray-700">01863646515</span>
                     </a>
                   </li>
 
