@@ -7,7 +7,6 @@ import Login from "../pages/Authentication/Login";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../layouts/DashboardLayout";
-import AllTasks from "../pages/Dashboard/AllTasks";
 import Statistics from "../pages/Dashboard/Statistics";
 import TaskBoard from "../pages/Dashboard/TaskBoard";
 
@@ -70,23 +69,6 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      //   {
-      //     path: "manageUsers",
-      //     element: (
-      //       <PrivateRoute>
-      //         <ManageUsers />
-      //       </PrivateRoute>
-      //     ),
-      //   },
-
-      //   {
-      //     path: "allArticles",
-      //     element: (
-      //       <PrivateRoute>
-      //         <AdminArticles />
-      //       </PrivateRoute>
-      //     ),
-      //   },
     ],
   },
 ]);
