@@ -25,20 +25,33 @@ const TaskCard = ({ task }) => {
   };
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md">
-      <h3 className="font-semibold">{task.title}</h3>
-      <p className="text-sm text-gray-600">{task.description}</p>
-      <div className="flex justify-between mt-3">
-        <HiPencil
-          className="h-5 w-5 text-blue-600 cursor-pointer"
+    <div className="p-5 bg-white rounded-xl shadow-lg border border-gray-200 transition-all hover:shadow-2xl hover:-translate-y-1 mb-3">
+      {/* Title */}
+      <h3 className="font-bold text-lg text-gray-900">{task.title}</h3>
+      
+      {/* Description */}
+      <p className="text-sm text-gray-500 mt-1">{task.description}</p>
+
+      {/* Action Buttons */}
+      <div className="flex justify-between items-center mt-4">
+        <button
+          className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all"
           onClick={() => setIsEditOpen(true)}
-        />
-        <FaTrash
-          className="h-5 w-5 text-red-600 cursor-pointer"
+        >
+          <HiPencil className="h-5 w-5" />
+          <span className="text-sm">Edit</span>
+        </button>
+
+        <button
+          className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all"
           onClick={handleDelete}
-        />
+        >
+          <FaTrash className="h-5 w-5" />
+          <span className="text-sm">Delete</span>
+        </button>
       </div>
 
+      {/* Edit Modal */}
       <EditTaskModal isOpen={isEditOpen} setIsOpen={setIsEditOpen} task={task} />
     </div>
   );

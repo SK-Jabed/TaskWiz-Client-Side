@@ -189,7 +189,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:text-gray-700/75"
                       href="#"
                     >
-                      Item Recovery
+                      Add Task
                     </a>
                   </li>
 
@@ -198,7 +198,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:text-gray-700/75"
                       href="#"
                     >
-                      User Matching
+                      Edit Task
                     </a>
                   </li>
 
@@ -207,7 +207,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:text-gray-700/75"
                       href="#"
                     >
-                      Lost Item Reports
+                      Drag & Drop
                     </a>
                   </li>
 
@@ -216,7 +216,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:text-gray-700/75"
                       href="#"
                     >
-                      Item Recovery
+                      Tasks Management
                     </a>
                   </li>
                 </ul>
@@ -241,7 +241,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:text-gray-700/75"
                       href="#"
                     >
-                      All Items
+                      About Us
                     </a>
                   </li>
                   <li>
@@ -249,7 +249,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:text-gray-700/75"
                       href="#"
                     >
-                      My Items
+                      All Tasks
                     </a>
                   </li>
 
@@ -258,7 +258,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:text-gray-700/75"
                       href="#"
                     >
-                      Recovered Items
+                      Terms & Conditions
                     </a>
                   </li>
                 </ul>
@@ -356,7 +356,7 @@ const Footer = () => {
               </p>
 
               <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
-                &copy; 2025 LostFinder
+                &copy; 2025 TaskWiz
               </p>
             </div>
           </div>

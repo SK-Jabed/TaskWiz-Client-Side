@@ -54,14 +54,14 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
     children: [
-      {
-        index: true,
-        element: (
-          <PrivateRoute>
-            <Statistics />
-          </PrivateRoute>
-        ),
-      },
+      // {
+      //   index: true,
+      //   element: (
+      //     <PrivateRoute>
+      //       <Statistics />
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: "taskBoard",
         element: (
