@@ -23,7 +23,11 @@ const AddTaskModal = ({ isOpen, setIsOpen }) => {
   };
 
   return (
-    <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+    <Dialog
+      open={isOpen}
+      onClose={() => setIsOpen(false)}
+      className="relative z-50"
+    >
       <div className="fixed inset-0 bg-black/30 backdrop-blur-md transition-opacity" />
       <div className="fixed inset-0 flex items-center justify-center p-4">
         <Dialog.Panel className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full border border-gray-200">
@@ -45,7 +49,9 @@ const AddTaskModal = ({ isOpen, setIsOpen }) => {
 
           {/* Description Input */}
           <div className="mt-4">
-            <label className="text-sm font-medium text-gray-700">Description</label>
+            <label className="text-sm font-medium text-gray-700">
+              Description
+            </label>
             <textarea
               className="w-full border border-gray-300 rounded-lg px-3 py-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
               rows="3"
